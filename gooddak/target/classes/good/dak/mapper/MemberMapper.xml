@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="good.dak.mapper.MemberMapper">
+  	<insert id="addMember">
+  		insert into users (username,password,name,birth,gender,email,phone,addr,regdate,updatedate) 
+  		values(#{username},#{password},#{name},#{birth},#{gender},#{email},#{phone},#{addr},sysdate(),sysdate());
+  	</insert>
+  	
+  	<resultMap type="good.dak.domain.MemberVO" id="memberMap">
+  		<id property="username" column="username"/>
+  		<result property="password" column="password"/>
+  		<result property="name" column="name"/>
+  		<result property="birth" column="birth"/>
+  		<result property="gender" column="gender"/>
+  		<result property="email" column="email"/>
+  		<result property="phone" column="phone"/>
+  		<result property="addr" column="addr"/>
+  		<result property="regdate" column="regdate"/>
+  		<result property="updatedate" column="updatedate"/>
+  		<collection property="authList" resultMap="authMap"></collection>
+  	</resultMap>
+  	
+  	<resultMap type="good.dak.domain.AuthVO" id="authMap">
+  		<result property="username" column="username"/>
+  		<result property="authority" column="authority"/>
+  	</resultMap>
+  	
+  	<select id="read" resultMap="memberMap">
+  		select * from users where username = ${username} 
+  	</select>
+  </mapper>

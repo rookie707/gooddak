@@ -8,6 +8,13 @@ public class ItemVO {
 	private String seller;
 	private int stock;
 	private String info;
+	private String regdate;
+	public String getRegdate() {
+		return regdate;
+	}
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
+	}
 	public int getIno() {
 		return ino;
 	}
@@ -53,7 +60,7 @@ public class ItemVO {
 	@Override
 	public String toString() {
 		return "ItemVO [ino=" + ino + ", category=" + category + ", naming=" + naming + ", price=" + price + ", seller="
-				+ seller + ", stock=" + stock + ", info=" + info + "]";
+				+ seller + ", stock=" + stock + ", info=" + info + ", regdate=" + regdate + "]";
 	}
 	
 }

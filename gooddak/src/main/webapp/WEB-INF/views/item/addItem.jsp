@@ -63,7 +63,7 @@
                             </div>
                             <div class="group-input">
                                 <label for="con-pass">상품정보</label>
-                                <textarea rows="15" cols="59" name="info"></textarea>
+                                <textarea rows="15" cols="59" name="info" style="resize: none"></textarea>
                             </div>
                             <button type="submit" class="site-btn register-btn" id="register">등록하기</button>
                             <input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }">

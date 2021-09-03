@@ -3,7 +3,15 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="good.dak.mapper.ItemMapper">
+  	<!-- 상품추가 -->
   	<insert id="addItem">
   		insert into item (category, naming, price, seller, stock, info, regdate) values (#{category},#{naming},#{price},#{seller},#{stock},#{info},sysdate()); 
   	</insert>
+  	
+  	<!-- 상품 목록 -->
+  	<select id="getList" resultType="good.dak.domain.ItemVO"> 
+		<![CDATA[
+			select * from item where ino > 0; 
+		]]>
+	</select>
   </mapper>

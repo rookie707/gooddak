@@ -1,5 +1,7 @@
 package good.dak.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +15,8 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public void addItem(ItemVO iv) {
 		mapper.addItem(iv);
+	}
+	public ArrayList<ItemVO> getList(){
+		return mapper.getList();
 	}
 }

@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -175,10 +177,18 @@
                             </ul>
                         </li>
                     </ul>
-                    <ul class="register">
-                    	<li><a href="/customLogin" class="">로그인</a></li>
-                    	<li><a href="/register" class="">회원가입</a></li>
-                    </ul>
+                    <sec:authorize access="isAnonymous()">
+	                    <ul class="register">
+	                    	<li><a href="/customLogin" class="">로그인</a></li>
+	                    	<li><a href="/register" class="">회원가입</a></li>
+	                    </ul>
+                    </sec:authorize>
+                    <sec:authorize access="isAuthenticated()">
+						<ul class="register">
+	                    	<li><a href="/customLogout" class="">로그아웃</a></li>
+	                    	<li><a href="/item/addItem" class="">상품등록</a></li>
+	                    </ul>
+					</sec:authorize>
                 </nav>
                 <div id="mobile-menu-wrap"></div>
                 <div></div>

@@ -13,6 +13,5 @@
 <a href="/customLogout">Logout</a>
 <p>principal : <sec:authentication property="principal"/></p>
 <p>principal : <sec:authentication property="principal.username"/></p>
-<p>principal : <sec:authentication property="principal.gender"/></p>
 </body>
 </html>

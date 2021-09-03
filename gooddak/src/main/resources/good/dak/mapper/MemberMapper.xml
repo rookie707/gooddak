@@ -28,6 +28,6 @@
   	</resultMap>
   	
   	<select id="read" resultMap="memberMap">
-  		select * from users where username = ${username} 
+  		select username, password, enabled, gender from users where username = ${username}
   	</select>
   </mapper>

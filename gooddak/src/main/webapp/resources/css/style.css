@@ -654,18 +654,10 @@ ol {
 	position: relative;
 }
 
-.nav-item .nav-depart .depart-btn .depart-hover {
-	display: flex;
-	top: 99999px; <!-- 52 -->
-	opacity: 1;
-	visibility: visible;
-	z-index: 1;
-}
-
 
 .nav-item .nav-depart .depart-btn .depart-hover:hover {
 	display: flex;
-	top: 99999px; <!-- 52 -->
+	top: 52px; <!-- 52 -->
 	opacity: 1;
 	visibility: visible;
 	z-index: 1;
@@ -701,7 +693,7 @@ ol {
 	border: 2px solid #ccc;
 	background: #fff;
 	left: 0;
-	top: 40px;
+	top: 9999px;
 	opacity: 0;
 	visibility: visible;
 	padding-bottom: 29px;

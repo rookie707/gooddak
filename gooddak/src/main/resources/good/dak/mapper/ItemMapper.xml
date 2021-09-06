@@ -22,7 +22,7 @@
 		from (select @rownum:=0) as rownum
 		, item  order by ino desc ) pageboard
 		<![CDATA[
-         where rownum>(#{pageNum}-1)*#{amount}) and rownum<= #{pageNum}*#{amount}
+         where rownum>(#{pageNum}-1)*#{amount} and rownum<= #{pageNum}*#{amount}
         	]]>
 	</select>
 	

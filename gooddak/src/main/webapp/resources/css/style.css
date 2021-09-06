@@ -654,9 +654,18 @@ ol {
 	position: relative;
 }
 
-.nav-item .nav-depart .depart-btn:hover .depart-hover {
-	display: none;
-	top: 52px;
+.nav-item .nav-depart .depart-btn .depart-hover {
+	display: flex;
+	top: 99999px; <!-- 52 -->
+	opacity: 1;
+	visibility: visible;
+	z-index: 1;
+}
+
+
+.nav-item .nav-depart .depart-btn .depart-hover:hover {
+	display: flex;
+	top: 99999px; <!-- 52 -->
 	opacity: 1;
 	visibility: visible;
 	z-index: 1;

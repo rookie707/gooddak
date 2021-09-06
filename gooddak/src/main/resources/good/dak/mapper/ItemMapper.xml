@@ -14,4 +14,19 @@
 			select * from item where ino > 0; 
 		]]>
 	</select>
+	
+	<!-- 페이징처리된 상품 목록 -->
+	<select id="getListWithPaging" resultType="good.dak.domain.ItemVO">
+	select* from
+		(select @rownum:=@rownum+1 as rownum, ino, category, naming, price,seller, stock, info, regdate
+		from (select @rownum:=0) as rownum
+		, item  order by ino desc ) pageboard
+		<![CDATA[
+         where rownum>(#{pageNum}-1)*#{amount}) and rownum<= #{pageNum}*#{amount}
+        	]]>
+	</select>
+	
+	<select id="getTotalCount" resultType="int">
+		select count(*) from item
+	</select>
   </mapper>

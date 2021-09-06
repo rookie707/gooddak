@@ -28,35 +28,8 @@
 </head>
 <body>
 
-<%@ include file="../header.jsp" %>
-<div class="tableContainer">
-<table class="table table-bordered" id="dataTable">
-	<tr>
-		<td>번호</td><td>상품명</td><td>판매자</td><td>등록일자</td>
-	</tr>
-	<c:forEach items="${list }" var="board"> <!-- list의 값을 board[i]에 저장함 -->
-	<tr>
-		<td><c:out value="${board.ino }"></c:out></td>
-		<td><c:out value="${board.naming }"></c:out> </td>
-		<td><c:out value="${board.seller }"></c:out> </td>
-		<td><c:out value="${board.regdate }"></c:out> </td>
-	</tr>
-	</c:forEach>
-</table>
-</div>
-<div class="pull-right">
-<ul class="pagination">
-<c:if test="${pageMaker.prev}">
-	<li class="paginate_button previous"><a href="itemList?pageNum=${pageMaker.startPage -1 }&amout=${pageMaker.cri.amount}">Previous</a></li>
-</c:if>
-<c:forEach var="num" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
-	<li class="paginate_button"><a href="itemList?pageNum=${num}&amout=${pageMaker.cri.amount}">${num}</a></li>
-</c:forEach>
-<c:if test="${pageMaker.next}">
-	<li class="paginate_button next"><a href="itemList?pageNum=${pageMaker.endPage +1 }&amout=${pageMaker.cri.amount}">Next</a></li>
-</c:if>
-</ul>
-</div>
+
+
 
  <script src="../resources/js/jquery-3.3.1.min.js"></script>
     <script src="../resources/js/bootstrap.min.js"></script>

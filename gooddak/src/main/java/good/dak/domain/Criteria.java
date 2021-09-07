@@ -3,6 +3,7 @@ package good.dak.domain;
 public class Criteria {
 	private int pageNum; // 페이지 번호
 	private int amount; // 페이지당 표시될 목록의 갯수
+	private String seller;
 	private String type;
 	private String keyword;
 	

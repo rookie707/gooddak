@@ -30,17 +30,20 @@
 
 <%@ include file="../header.jsp" %>
 <div class="tableContainer">
+<sec:authentication property="principal" var="pinfo"/>
 <table class="table table-bordered" id="dataTable">
 	<tr>
 		<td>번호</td><td>상품명</td><td>판매자</td><td>등록일자</td>
 	</tr>
 	<c:forEach items="${list }" var="board"> <!-- list의 값을 board[i]에 저장함 -->
+	<c:if test="${pinfo.username eq board.seller }">
 	<tr>
 		<td><c:out value="${board.ino }"></c:out></td>
 		<td><c:out value="${board.naming }"></c:out> </td>
 		<td><c:out value="${board.seller }"></c:out> </td>
 		<td><c:out value="${board.regdate }"></c:out> </td>
 	</tr>
+	</c:if>
 	</c:forEach>
 </table>
 <div class="page_move">

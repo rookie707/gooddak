@@ -20,7 +20,7 @@
 	select* from
 		(select @rownum:=@rownum+1 as rownum, ino, category, naming, price,seller, stock, info, regdate
 		from (select @rownum:=0) as rownum
-		, item  order by ino desc ) pageboard
+		, item  order by ino asc ) pageboard
 		<![CDATA[
          where rownum>(#{pageNum}-1)*#{amount} and rownum<= #{pageNum}*#{amount}
         	]]>
@@ -28,5 +28,9 @@
 	
 	<select id="getTotalCount" resultType="int">
 		select count(*) from item
+	</select>
+	
+	<select id="getIno" resultType="good.dak.domain.ItemVO">
+		select*from item where ino = #{ino}
 	</select>
   </mapper>

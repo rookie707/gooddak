@@ -48,6 +48,13 @@ public class PageController {
 		return "redirect:/";
 	}
 	
-	
+	@GetMapping("header")
+	public void test() {
+		
+	}
+	@GetMapping("footer")
+	public void test2() {
+		
+	}
 }
 	

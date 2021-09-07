@@ -27,10 +27,32 @@
 <title>Fashi | Template</title>
 </head>
 <body>
-
-
-
-
+<%@ include file="../header.jsp" %>
+<section class="product">
+	<div>
+		<div class="product_container">
+			<div class="productImg"><img alt="#" src="../resources/img/products/product1.jpg"></div>
+			<div>
+				<ul>
+					<li class="title">${info.naming }</li>
+					<li class="price"><span class="discount">50%</span><span>${info.price }원</span><del>3000원</del></li>
+					<li class="deli_price"><span>배송비</span><span>최종결제금액에 따라 부과</span></li>
+					<li class="deli_select">
+						<div>배송선택</div>
+						<div>
+							<div>주문/결제시 배송방법 선택<br>(주문량이 많을 경우 순차출고 될 수 있습니다.)</div>
+							<div>
+								<div><span>일반택배</span><span>지금 주문시 다음날 </span><span>도착예정</span></div>
+								<div><span>새벽택배</span><span>지금 주문시 다음날 아침</span><span>도착예정</span></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<%@ include file="../footer.jsp" %>
  <script src="../resources/js/jquery-3.3.1.min.js"></script>
     <script src="../resources/js/bootstrap.min.js"></script>
     <script src="../resources/js/jquery-ui.min.js"></script>

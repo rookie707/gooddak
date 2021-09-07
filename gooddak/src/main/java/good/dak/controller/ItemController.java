@@ -42,8 +42,8 @@ public class ItemController {
 		return "redirect:/item/itemList";
 	}
 	
-	@GetMapping("/Info")
-	public void get(@RequestParam("ino") int ino, Model model) {
-		
+	@GetMapping("/itemInfo") // 상품정보
+	public void getInfo(@RequestParam("ino") int ino, Model model) {
+		model.addAttribute("info", service.getIno(ino));
 	}
 }

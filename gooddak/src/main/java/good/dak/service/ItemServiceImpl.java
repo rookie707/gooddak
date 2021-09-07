@@ -26,4 +26,7 @@ public class ItemServiceImpl implements ItemService {
 	public int getTotalCount(Criteria cri) {
 		return mapper.getTotalCount(cri);
 	}
+	public ItemVO getIno(int ino) {
+		return mapper.getIno(ino);
+	}
 }

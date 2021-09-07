@@ -10,4 +10,5 @@ public interface ItemService {
 	public ArrayList<ItemVO> getList(); // 상품목록
 	public ArrayList<ItemVO> getListWithPaging(Criteria cri);
 	public int getTotalCount(Criteria cri);
+	public ItemVO getIno(int ino);
 }

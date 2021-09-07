@@ -10,4 +10,5 @@ public interface ItemMapper {
 	public ArrayList<ItemVO> getList();
 	public ArrayList<ItemVO> getListWithPaging(Criteria cri);
 	public int getTotalCount(Criteria cri);
+	public ItemVO getIno(int ino);
 }

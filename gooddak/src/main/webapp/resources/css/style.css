@@ -693,7 +693,7 @@ ol {
 	border: 2px solid #ccc;
 	background: #fff;
 	left: 0;
-	top: 9999px;
+	top: -9999px;
 	opacity: 0;
 	visibility: visible;
 	padding-bottom: 29px;
@@ -1058,6 +1058,61 @@ ol {
 .category-banner {
 	padding-top: 0;
 	padding-bottom: 80px;
+}
+
+/*---------------------
+ 		상품정보
+-----------------------*/
+
+.product{
+	margin: 80px auto;
+	width: 1100px;
+}
+
+.product_container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.product_container div{
+	width: 525px;
+}
+
+.productImg{
+	margin-right: 50px;
+}
+
+.product .title{
+	font-size: 30px;
+	text-align: left;
+	font-weight: 500;
+}
+
+.product .price{
+	margin: 10px 0;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.product .price span{
+	margin-right: 15px;
+	font-size: 35px;
+	font-weight: 600;
+}
+
+.product .price del{
+	margin-right: 15px;
+	font-size: 35px;
+	font-weight: 400;
+	color: #bbb;
+}
+
+.product .price .discount{
+	color: #ea4335;
+}
+
+.product .deli_price{
+	margin: 10px 0;
 }
 
 .product-large {

@@ -39,7 +39,7 @@
 	<c:if test="${pinfo.username eq board.seller }">
 	<tr>
 		<td><c:out value="${board.ino }"></c:out></td>
-		<td><c:out value="${board.naming }"></c:out> </td>
+		<td><a href="itemInfo?ino=${board.ino }"><c:out value="${board.naming }"></c:out></a></td>
 		<td><c:out value="${board.seller }"></c:out> </td>
 		<td><c:out value="${board.regdate }"></c:out> </td>
 	</tr>

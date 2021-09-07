@@ -9,7 +9,7 @@
 <!-- <bean id="customLoginSuccess" class="good.dak.security.CustomLoginSuccessHandler"></bean>  -->
  <!--<bean id="customPasswordEncoder" class="good.dak.security.CustomNoOpPasswordEncoder"></bean>  -->
 <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean> 
-<bean id="customUserDetailsService" class="good.dak.security.CustomUserDetailsService"></bean>
+<!-- <bean id="customUserDetailsService" class="good.dak.security.CustomUserDetailsService"></bean>  -->
 <security:http auto-config="true" use-expressions="true">
 		<security:intercept-url pattern="/sample/all" access="permitAll"/>
 		<security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')"/>

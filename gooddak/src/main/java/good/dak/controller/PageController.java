@@ -36,7 +36,6 @@ public class PageController {
 	public void register() {
 		logger.info("회원가입 화면으로 이동");
 	}
-	
 	@PostMapping("/addMember")
 	public String addMember(MemberVO mb) {
 		logger.info("회원가입중");

@@ -43,8 +43,7 @@
 	</tr>
 	</c:forEach>
 </table>
-</div>
-<div class="pull-right">
+<div class="page_move">
 <ul class="pagination">
 <c:if test="${pageMaker.prev}">
 	<li class="paginate_button previous"><a href="itemList?pageNum=${pageMaker.startPage -1 }&amout=${pageMaker.cri.amount}">Previous</a></li>
@@ -57,6 +56,8 @@
 </c:if>
 </ul>
 </div>
+</div>
+
 
  <script src="../resources/js/jquery-3.3.1.min.js"></script>
     <script src="../resources/js/bootstrap.min.js"></script>

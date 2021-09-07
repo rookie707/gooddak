@@ -1375,6 +1375,20 @@ ol {
 	margin: 0 auto;
 }
 
+.pagination{
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.pagination li{
+	margin-left: 5px;
+}
+
+pagination li a{
+	font-size: 32px;
+}
+
 
 /*---------------------
   Instagram Photo
